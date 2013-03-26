@@ -127,4 +127,13 @@ class DB {
 	public static function getCountQueries () {
 		return self::$countQueries;
 	}
+
+	/**
+	 * Очистка запроса
+	 * @param string $string - запрос для очистки
+	 * @return string
+	 */
+	public function escape_string ($string) {
+		return $this->engine->escape_string ($string);
+	}
 }
